@@ -1,0 +1,29 @@
+{
+	"name": "giffy-wheelhouse",
+	"version": "0.1.0",
+	"private": true,
+	"description": "A Wheelhouse plugin: a pre-checked catalogue of GIFs, by occasion, for Firstmate's chat, and the MCP server that hands them out.",
+	"license": "MIT",
+	"author": "Chris Owen",
+	"repository": "github:chrisjowen/giffy-wheelhouse",
+	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"lint": "eslint . && prettier --check .",
+		"format": "prettier --write .",
+		"test": "node --test \"test/*.test.mjs\"",
+		"recheck": "node scripts/verify.mjs",
+		"recheck:flag": "node scripts/verify.mjs --flag",
+		"harvest": "node scripts/harvest.mjs",
+		"mcp": "node mcp/server.mjs"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.39.5",
+		"ajv": "^8.20.0",
+		"eslint": "^9.39.5",
+		"globals": "^17.13.0",
+		"prettier": "^3.9.10"
+	}
+}

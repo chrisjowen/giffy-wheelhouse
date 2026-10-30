@@ -1,0 +1,22 @@
+name: Re-check GIFs
+
+# Once a week, check that every GIF in the catalogue still loads. It changes
+# nothing: a failed run lists the GIFs that no longer load, and
+# `npm run recheck` (then `npm run harvest` to top up) fixes the catalogue.
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/verify.mjs --dry-run
