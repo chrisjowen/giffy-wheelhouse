@@ -2,10 +2,11 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { test } from 'node:test';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import plugin from '../wheelhouse/server/index.js';
 import { checkedLine, longDate, safeUrl, thumbnail } from '../wheelhouse/ui/format.js';
+import { Element, RawHtml, Text, installDom, walk } from './fixtures/dom.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(
@@ -45,11 +46,41 @@ test('the server entry contributes exactly what the manifest lists', () => {
 	}
 });
 
-test('the page element is defined under the tag the contribution names', () => {
-	const ui = readFileSync(path.join(root, manifest.wheelhouse.ui), 'utf8');
-	assert.match(ui, /customElements\.define\('giffy-wheelhouse-gifs'/);
-	// Only the element's own icon markup goes through innerHTML; plugin text is textContent.
-	assert.deepEqual(ui.match(/innerHTML\s*=\s*[\w.]+/g), ['innerHTML = markup']);
+test('the page element is defined under the tag the contribution names, and shows plugin text as text', async () => {
+	installDom();
+	await import(pathToFileURL(path.join(root, manifest.wheelhouse.ui)).href);
+	const tag = plugin.contributions[0].render.element;
+	const GifsPage = /** @type {any} */ (globalThis).customElements.get(tag);
+	assert.ok(GifsPage, `${tag} is defined`);
+
+	const hostile = '<img src=x onerror=alert(1)>';
+	const gif = { id: 'g1', url: 'https://example.com/a.gif', alt: hostile, checked: '2026-10-30' };
+	const page = /** @type {any} */ (new GifsPage());
+	page.data = {
+		total: 1,
+		checkedFrom: '2026-10-30',
+		checkedTo: '2026-10-30',
+		occasions: [{ id: 'o1', title: hostile, when: hostile, gifs: [gif] }],
+		noGif: { title: 'None', when: hostile }
+	};
+	const views = [];
+	const nodes = () => [...walk(page.shadowRoot)];
+	const find = (/** @type {string} */ cls) =>
+		nodes().find((n) => n instanceof Element && n.getAttribute('class') === cls);
+	views.push(nodes());
+	/** @type {any} */ (find('card')).click();
+	views.push(nodes());
+	/** @type {any} */ (find('tile')).click();
+	views.push(nodes());
+
+	for (const view of views) {
+		assert.ok(
+			view.some((n) => n instanceof Text && n.data === hostile),
+			'shown as text'
+		);
+		for (const n of view) if (n instanceof RawHtml) assert.ok(!n.markup.includes(hostile));
+	}
+	assert.ok(views[2].some((n) => n instanceof Element && n.tagName === 'DIALOG'));
 });
 
 test('the catalogue provider gives the page every occasion and GIF, small enough for Wheelhouse', async () => {
