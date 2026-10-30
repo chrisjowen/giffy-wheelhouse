@@ -1,0 +1,20 @@
+{
+	"$schema": "https://raw.githubusercontent.com/chrisjowen/wheelhouse/main/packages/plugin-sdk/plugin.schema.json",
+	"name": "giffy-wheelhouse",
+	"displayName": "Giffy",
+	"version": "0.1.0",
+	"description": "A catalogue of pre-checked GIFs, by occasion, for Firstmate's chat: one in every merge, release, landed or preview message, sparing ones elsewhere, none for bad news. Its GIFs page browses them.",
+	"author": { "name": "Chris Owen", "url": "https://github.com/chrisjowen" },
+	"repository": "https://github.com/chrisjowen/giffy-wheelhouse",
+	"license": "MIT",
+	"keywords": ["gif", "chat", "firstmate"],
+	"wheelhouse": {
+		"apiVersion": 1,
+		"server": "wheelhouse/server/index.js",
+		"ui": "wheelhouse/ui/index.js",
+		"enabledByDefault": false,
+		"contributions": [{ "id": "gifs", "slot": "nav.page" }],
+		"services": [],
+		"mcpServers": []
+	}
+}

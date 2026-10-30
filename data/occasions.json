@@ -1,0 +1,334 @@
+{
+	"occasions": [
+		{
+			"id": "merged",
+			"title": "Merged",
+			"when": "A pull request merged, or work landed on the default branch.",
+			"aliases": ["landed", "merge", "pr-merged", "shipped-to-main"],
+			"search": [
+				"nailed it",
+				"mission accomplished",
+				"success",
+				"victory",
+				"yes",
+				"boom",
+				"merged",
+				"success kid",
+				"we did it",
+				"yes yes yes",
+				"touchdown"
+			]
+		},
+		{
+			"id": "release",
+			"title": "Released",
+			"when": "A release went out: a version tagged, published or deployed.",
+			"aliases": ["released", "shipped", "ship-it", "deploy", "deployed", "launch", "version"],
+			"search": [
+				"ship it",
+				"rocket launch",
+				"its live",
+				"launch",
+				"blast off",
+				"here we go",
+				"shipped",
+				"new release",
+				"to the moon",
+				"rocket",
+				"countdown"
+			]
+		},
+		{
+			"id": "preview",
+			"title": "Preview ready",
+			"when": "A live preview is up for the captain to look at.",
+			"aliases": ["preview-ready", "demo", "take-a-look", "screenshot"],
+			"search": [
+				"ta da",
+				"take a look",
+				"check it out",
+				"presenting",
+				"here it is",
+				"voila",
+				"tada",
+				"sneak peek",
+				"behold",
+				"look at this",
+				"showcase"
+			]
+		},
+		{
+			"id": "pr-ready",
+			"title": "Ready for review",
+			"when": "A pull request is open and ready for the captain to review.",
+			"aliases": ["pr", "pull-request", "review", "ready-for-review", "pr-open"],
+			"search": [
+				"ready for review",
+				"your turn",
+				"here you go",
+				"ready",
+				"all yours",
+				"over to you",
+				"ready when you are",
+				"have a look",
+				"for your review",
+				"im ready",
+				"your move"
+			]
+		},
+		{
+			"id": "tests-green",
+			"title": "Checks green",
+			"when": "Tests and CI passed.",
+			"aliases": ["green", "ci-green", "checks-passed", "tests-pass", "all-green", "passing"],
+			"search": [
+				"thumbs up",
+				"green light",
+				"all good",
+				"perfect",
+				"approved",
+				"check",
+				"thumbs up ok",
+				"all clear",
+				"passed",
+				"looks good",
+				"nice work"
+			]
+		},
+		{
+			"id": "bug-fixed",
+			"title": "Bug fixed",
+			"when": "A bug the captain cared about is fixed.",
+			"aliases": ["fixed", "fix", "bugfix", "squashed", "solved"],
+			"search": [
+				"fixed it",
+				"problem solved",
+				"bug",
+				"fixing",
+				"repair",
+				"handyman",
+				"fixed",
+				"fix it",
+				"bug fixed",
+				"repaired",
+				"solved"
+			]
+		},
+		{
+			"id": "welcome-back",
+			"title": "Welcome back",
+			"when": "The captain is back after a while away.",
+			"aliases": ["hello", "hi", "back", "greeting"],
+			"search": [
+				"welcome back",
+				"hello",
+				"hi there",
+				"hey",
+				"wave hello",
+				"youre back",
+				"welcome",
+				"hello friend",
+				"good to see you",
+				"howdy",
+				"hey there"
+			]
+		},
+		{
+			"id": "waiting-on-you",
+			"title": "Waiting on you",
+			"when": "A decision or answer from the captain is needed before work can go on.",
+			"aliases": ["waiting", "your-call", "needs-decision", "question", "decision"],
+			"search": [
+				"waiting",
+				"your call",
+				"patiently waiting",
+				"tapping fingers",
+				"what do you think",
+				"decisions",
+				"still waiting",
+				"waiting for you",
+				"choose",
+				"tick tock",
+				"your decision"
+			]
+		},
+		{
+			"id": "working",
+			"title": "On it",
+			"when": "Work is under way and there is progress to share.",
+			"aliases": ["thinking", "on-it", "in-progress", "busy", "progress"],
+			"search": [
+				"on it",
+				"working hard",
+				"thinking",
+				"typing",
+				"hard at work",
+				"lets do this",
+				"working",
+				"busy",
+				"in progress",
+				"computer typing",
+				"focus"
+			]
+		},
+		{
+			"id": "under-way",
+			"title": "Under way",
+			"when": "A new task or voyage is starting.",
+			"aliases": ["set-sail", "started", "starting", "kickoff", "aye-aye", "begin"],
+			"search": [
+				"aye aye captain",
+				"set sail",
+				"full steam ahead",
+				"anchors aweigh",
+				"sailing",
+				"lets go",
+				"ahoy",
+				"captain",
+				"boat",
+				"ship sailing",
+				"all aboard"
+			]
+		},
+		{
+			"id": "celebration",
+			"title": "Celebration",
+			"when": "A big milestone, or something the captain is celebrating.",
+			"aliases": ["celebrate", "party", "milestone", "hooray", "woohoo"],
+			"search": [
+				"celebration",
+				"party",
+				"confetti",
+				"happy dance",
+				"champagne",
+				"fireworks",
+				"celebrate",
+				"hooray",
+				"yay",
+				"woohoo",
+				"dance party"
+			]
+		},
+		{
+			"id": "all-done",
+			"title": "All done",
+			"when": "Everything asked for is finished, the end of a batch or a day's work.",
+			"aliases": ["done", "finished", "complete", "wrap", "thats-a-wrap"],
+			"search": [
+				"thats a wrap",
+				"all done",
+				"finished",
+				"done",
+				"mic drop",
+				"the end",
+				"done and done",
+				"complete",
+				"wrap",
+				"job done",
+				"finally done"
+			]
+		},
+		{
+			"id": "thanks",
+			"title": "Thank you",
+			"when": "Thanking the captain for something.",
+			"aliases": ["thank-you", "thankyou", "appreciate", "grateful"],
+			"search": [
+				"thank you",
+				"thanks",
+				"appreciate it",
+				"grateful",
+				"much appreciated",
+				"bow",
+				"thank you so much",
+				"thx",
+				"cheers",
+				"gratitude",
+				"merci"
+			]
+		},
+		{
+			"id": "high-five",
+			"title": "High five",
+			"when": "The captain had a good idea or did something worth cheering.",
+			"aliases": ["nice", "good-job", "great-idea", "well-done", "kudos", "props"],
+			"search": [
+				"high five",
+				"great idea",
+				"good job",
+				"well done",
+				"nice",
+				"applause",
+				"high fives",
+				"great job",
+				"kudos",
+				"bravo",
+				"clapping"
+			]
+		},
+		{
+			"id": "good-morning",
+			"title": "Good morning",
+			"when": "The first message of the captain's morning.",
+			"aliases": ["morning", "gm"],
+			"search": [
+				"good morning",
+				"morning coffee",
+				"rise and shine",
+				"coffee",
+				"wake up",
+				"morning",
+				"good morning sunshine",
+				"morning coffee time",
+				"breakfast",
+				"sunrise",
+				"hello morning"
+			]
+		},
+		{
+			"id": "good-night",
+			"title": "Good night",
+			"when": "Signing off for the night.",
+			"aliases": ["night", "goodnight", "gn", "bedtime", "sign-off"],
+			"search": [
+				"good night",
+				"sleepy",
+				"see you tomorrow",
+				"bedtime",
+				"sweet dreams",
+				"night night",
+				"goodnight",
+				"night",
+				"sleep",
+				"sleeping",
+				"moon"
+			]
+		}
+	],
+	"noGif": {
+		"id": "bad-news",
+		"title": "No GIF",
+		"when": "Bad news of any kind: a failure, red checks, an error, a blocked or failed task, a serious review or security finding, a rollback, lost work, an apology, or anything the captain needs to worry about.",
+		"aliases": [
+			"failure",
+			"failed",
+			"fail",
+			"error",
+			"blocked",
+			"broken",
+			"red",
+			"ci-red",
+			"tests-failed",
+			"incident",
+			"security",
+			"finding",
+			"serious",
+			"rollback",
+			"revert",
+			"sorry",
+			"apology",
+			"outage",
+			"lost"
+		]
+	}
+}
