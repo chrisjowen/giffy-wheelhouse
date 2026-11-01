@@ -10,6 +10,8 @@ is on, Firstmate puts one in every message about a merge, a release, work that l
 preview, and now and then one elsewhere, and never one for bad news. It never looks a GIF up:
 it only hands out URLs from the catalogue, so there is no API key and no live search.
 
+![Firstmate's chat in Wheelhouse: a message reporting a merged pull request ends with a "Nailed It" GIF from Giffy](docs/images/chat.png)
+
 ## Install
 
 ```sh
@@ -25,6 +27,8 @@ dependencies.
 Giffy is off until you turn it on: **Settings → Plugins → Giffy**, the switch at the top. The
 switch is the one control: Firstmate uses GIFs while it is on and stops when it is off, without
 a restart. (On for any one project counts as on, since the chat belongs to no one project.)
+
+![Giffy's page in Settings → Plugins: the Every project switch turned on, a per-project override, and what the plugin adds](docs/images/settings.png)
 
 ## Connect Firstmate (once)
 
@@ -104,6 +108,12 @@ of its GIFs, how many it has and when it fits; the no-GIF rule beside them; a ca
 occasion's GIFs, moving (still, when the system asks for reduced motion), and a GIF opens on its
 own, larger, with its description, when it was checked and a link to it on GIPHY. It follows
 Wheelhouse's light and dark themes.
+
+![The GIFs page: 492 GIFs for 16 occasions, with a card per occasion showing a still, when it fits and how many GIFs it has](docs/images/gifs.png)
+
+![The Merged occasion opened: a grid of its GIFs, each with its description](docs/images/occasion.png)
+
+![One GIF opened on its own: Mission Accomplished, checked to load on 30 October 2026, with Open on GIPHY and Close](docs/images/gif.png)
 
 ## The catalogue
 
