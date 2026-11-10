@@ -30,7 +30,7 @@ test("the manifest is valid under Wheelhouse's schema", () => {
 test('the server entry contributes exactly what the manifest lists', () => {
 	assert.deepEqual(
 		plugin.contributions.map((c) => ({ id: c.id, slot: c.slot })),
-		manifest.wheelhouse.contributions
+		manifest.wheelhouse.contributions.map((c) => ({ id: c.id, slot: c.slot }))
 	);
 	assert.deepEqual(plugin.services, manifest.wheelhouse.services);
 	assert.deepEqual(plugin.mcpServers, manifest.wheelhouse.mcpServers);
