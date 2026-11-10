@@ -13,7 +13,7 @@
 		"server": "wheelhouse/server/index.js",
 		"ui": "wheelhouse/ui/index.js",
 		"enabledByDefault": false,
-		"contributions": [{ "id": "gifs", "slot": "nav.page" }],
+		"contributions": [{ "id": "gifs", "slot": "nav.page", "icon": "wheelhouse/icon.svg" }],
 		"services": [],
 		"mcpServers": []
 	}
